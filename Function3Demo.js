@@ -119,5 +119,13 @@ console.log('Reduced Sum:', reduceSum);
 
 // Chaining
 
-let hondaCarSum = cars.filter((car) => car.name.includes('honda')).reduce((acc, curr) => acc + curr.price, 0)
-console.log("hondaSumPrice:", hondaCarSum);
+// let hondaCarSum = cars.filter((car) => car.name.includes('honda')).reduce((acc, curr) => acc + curr.price, 0)
+
+
+let hondaSumPrice = cars.filter((car) => {
+    return car.name.includes('honda')
+}).reduce((acc, curr) => {
+    return acc + curr.price
+}, 0)
+
+console.log("hondaSumPrice:", hondaSumPrice);
